@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+        
+    
+}
+
+/* ocultar elementos */ 
+
+.hidden {
+    display: none;
+    }
+
+    /* formulario */
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   position: absolute;
+   z-index: 1;
+  
+    /*  left: 550px;
+    top: 150px;  */
+    width: 400px;
+    height: 450px;
+    border: 2px solid  #625d5d;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+   
+}
+.box2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   position: absolute;
+   z-index: 1;
+   /* left: 550px; */
+   /* top: 150px; */
+    width: 420px;
+    height: 610px;
+    border: 2px solid  #625d5d;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+   
+}
+
+h2{
+    
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+}
+
+.inputbox{
+    
+    position: relative;
+    margin: 30px 0;
+    width: 300px;
+    border-bottom: 1px solid#fff;
+}
+
+.inputbox label{
+    position: absolute ;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1em ;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+input:focus ~ label{
+    top: -5px;
+}
+
+
+.inputbox input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding: 0 35px 0 5px;
+    color: #fafafaa4;
+}
+
+.inputbox ion-icon{
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size: 1.2em;
+    top: 20px;
+}
+
+.btn_conteiner{
+    /* margin-top: 30px; */
+    /* margin-right: 20px; */
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+ button{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background-color: #e6e2e2;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.3em;
+    font-weight: 700;
+    margin-top: 25px;
+}
+button:hover{
+    color:aliceblue;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 3px 1px  rgba(255, 255, 255, 0.274);
+}
+
+.forget{
+    
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0 15px;
+    font-size: 0.9em;
+    color: #fff;
+}
+
+.forget label:nth-child(2){
+    order: 1;
+}
+
+.forget label{
+    display: flex;
+    align-items: center;
+}
+
+.forget label input[ type="checkbox"]{
+    margin-right: 6px
+}
+
+.forget label a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.forget label a:hover{
+    text-decoration: underline;
+}
+
+.register {
+    display: flex;
+    justify-content:center;
+    font-size: 0.9em;
+    color: #fff;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.register p a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 800;
+}
+
+.register p a:hover{
+    text-decoration: underline;
+}
+
+/* efecto humo y tormenta */
+
+.navbar-hamburger {
+    position: absolute;
+    z-index: -1;
+    cursor: pointer; 
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255); 
+}
+
+
+    /* loader */
+
+    .loader {
+        
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .loader::before {
+        
+        content: "";
+        background: rgba(255, 255, 255,0.01);
+        backdrop-filter: blur(15px);
+        position: absolute;
+        width: 130px;
+        height: 50px;
+        z-index: 20;
+        border-radius: 0 0 10px 10px;
+        border: 1px solid rgba(255, 255, 255, 0.274);
+        border-top: none;
+        box-shadow: 0 15px 20px rgba(51, 50, 50, 0.744);
+        animation: anim2 1.9s infinite;
+      }
+      
+      .loader div {
+        
+        background: rgb(228, 228, 228,0.7);
+        border-radius: 50%;
+        width: 22px;
+        height: 22px;
+        z-index: -1;
+        animation: anim 1.9s infinite linear;
+        animation-delay: calc(-0.3s * var(--i));
+        transform: translateY(5px);
+        margin: 0.2em;
+      }
+      
+      /*animacion loader */
+      
+      @keyframes anim {
+        0%,
+        100% {
+          transform: translateY(5px);
+        }
+        50% {
+          transform: translateY(-65px);
+        }
+      }
+      
+      @keyframes anim2 {
+        0%,
+        100% {
+          transform: rotate(-10deg);
+        }
+        50% {
+          transform: rotate(10deg);
+        }
+    
+}
